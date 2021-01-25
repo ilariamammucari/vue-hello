@@ -10,9 +10,20 @@
 <body>
     
     <div id="root">
-        <span :class="font + ' ' + colore">{{ messaggio }}</span>
-        <img :src="urlLogo" alt="logo-Vue" :class="formattazioneImg">
-        <button @click="coloraScritta">Colora scritta!</button>
+        <!-- scritta e logo -->
+        <div class="scrite">
+            <span :class="[font,colore]">
+                {{ messaggio }}
+            </span>
+            <img :src="urlLogo" alt="logo-Vue" :class="formattazioneImg">
+        </div>
+        <!-- /scritta e logo -->
+
+        <!-- bottone -->
+        <div class="bottone">
+            <button @click="coloraScritta">Colora scritta!</button>
+        </div>
+        <!-- /bottone -->
     </div>
 
     <script src="js/script.js"></script>
