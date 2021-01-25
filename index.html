@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </head>
 <body>
     
     <div id="root">
-        <h1>{{ messaggio }}</h1>
+        <span :class="font + ' ' + colore">{{ messaggio }}</span>
+        <img :src="urlLogo" alt="logo-Vue" :class="formattazioneImg">
+        <button @click="coloraScritta">Colora scritta!</button>
     </div>
 
     <script src="js/script.js"></script>
